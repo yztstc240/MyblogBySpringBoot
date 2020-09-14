@@ -1,0 +1,191 @@
+/*------------菜单的透明度------------*/
+.my-menu-transparent{
+    opacity:0.7 !important;
+}
+/*-----------调整div的边距-----------*/
+.padded-mini{
+    padding: 0.3em !important;
+}
+
+.padded-mid{
+    padding: 3em!important;
+}
+.padded-large{
+    padding: 6em!important;
+}
+
+/*--------------内边距---------------*/
+.padded-tb-mini{
+    padding-top: 0.1em !important;
+    padding-bottom: 0.1em !important;
+}
+
+.padded-tb-small{
+    padding-top: 1em !important;
+    padding-bottom: 1em !important;
+}
+.padded-tb-mid{
+    padding-top: 2em !important;
+    padding-bottom: 2em !important;
+}
+.padded-tb-large{
+    padding-top: 3em !important;
+    padding-bottom: 3em !important;
+}
+.padded-tb-huge{
+    padding-top: 4em !important;
+    padding-bottom: 4em !important;
+}
+.padded-tb-massive{
+    padding-top: 5em !important;
+    padding-bottom: 5em !important;
+}
+
+.padded-lr-responsive{
+    padding-left: 4em!important;
+    padding-right: 4em!important;
+}
+/*-------------外边距--------------*/
+
+.margin-tb-left-tiny{
+    margin-left: 3em!important;
+    margin-top: 0.1em !important;
+}
+
+.margin-tb-small{
+    margin-top: 0.7em!important;
+    margin-bottom: 0.7em!important;
+    margin-right: 0.7em!important;
+}
+.margin-tb-mid{
+    margin-top: 2em!important;
+    margin-bottom: 2em!important;
+    margin-right: 1em!important;
+}
+
+.margin-top-tiny{
+    margin-top: 0.5em!important;
+}
+
+.margin-top-small{
+    margin-top: 1em!important;
+}
+
+
+.margin-top-mid{
+    margin-top: 2em !important;
+}
+
+.margin-tb-bottom-mini{
+    margin-bottom: 0.5em !important;
+}
+
+.margin-tb-lr{
+    margin-left: 3em !important;
+    margin-right: 3em !important;
+}
+
+/*------------text--------------*/
+.text-thin{
+    font-weight: 300 !important;
+
+}
+.text-spaced{
+    letter-spacing: 1px !important;
+}
+.text-lined{
+    line-height: 1.8;
+}
+
+.opacity-mini{
+    opacity: 0.8;
+}
+.my-text{
+    font-weight: 300 !important;
+    letter-spacing: 1px !important;
+    line-height: 1.7;
+}
+
+/*-----------display-----------*/
+.inline-block{
+    display: inline-block !important;
+}
+
+/*------------position-------------*/
+.top-right-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.fixed{
+    position: fixed !important;
+    z-index: 10 !important;
+}
+
+.right-button{
+    bottom:0 !important;
+    right: 0 !important;
+}
+
+/*------------container-------------*/
+.my-container{
+    max-width: 72em !important;
+    margin: auto;
+}
+
+.my-container-small{
+    max-width: 60em !important;
+    margin: auto;
+}
+
+/*--------------color---------------*/
+
+.my-text-black{
+    color: #333 !important;
+}
+.m-teal{
+    color: #00B5AD !important;
+}
+
+
+body{
+    background-image:url("../image/background-blue.png");
+    background-repeat: repeat;
+    background-attachment:fixed;
+    background-color:#CCCCCC;
+}
+
+/*--------------shadow-----------------*/
+.shadow-small{
+    -webkit-box-shadow: 0 4px 8px rgba(0,0,0,0.6) !important ;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.6) !important;
+}
+
+
+
+.mobile-show{
+    display: none !important;
+}
+
+@media screen and (max-width: 768px){
+    .mobile-hide{
+        display: none !important;
+    }
+    .mobile-show{
+        display: block !important;
+    }
+    .padded-lr-responsive{
+        padding-left: 0 !important;
+        padding-right: 0!important;
+    }
+    .mobile-lr-clear{
+        padding-left: 0 !important;
+        padding-right: 0!important;
+    }
+
+    .mobile-wide{
+        width: 100%;
+    }
+}
+

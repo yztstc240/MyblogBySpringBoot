@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:fragment="head(title)">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title th:replace="${title}">博客详情页</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css"> <!--控制浏览器页面尺寸-->
+    <link rel="stylesheet" href="../static/css/animate.min.css" th:href="@{/css/animate.min.css}"><!--动画插件-->
+    <link rel="stylesheet" href="../static/css/typo.css" th:href="@{/css/typo.css}"><!--页面布局插件-->
+    <link rel="stylesheet" href="../static/lib/prism/prism.css" th:href="@{/lib/prism/prism.css}"><!--代码高亮插件-->
+    <link rel="stylesheet" href="../static/css/index_css.css" th:href="@{/css/index_css.css}"><!--自定义样式-->
+    <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css" th:href="@{/lib/tocbot/tocbot.css}"><!--文章大纲插件-->
+</head>
+<body>
+<!--导航栏-->
+<nav th:fragment="menu(n)" class="ui my-menu-transparent inverted attached segment padded-tb-mini shadow-small animate__animated animate__fadeInDown">
+    <div class="ui container">
+        <div class="ui transparent inverted menu secondary stackable padded-tb-small">
+            <h2 class="ui teal header item">blog</h2>
+            <a href="#" th:href="@{/}" class="m-item item mobile-hide" th:classappend="${n==1} ? 'active'"><i class="home icon"></i>首页</a>
+            <a href="#" th:href="@{/types/-1}" class="m-item item mobile-hide" th:classappend="${n==2} ? 'active'"><i class="sitemap icon"></i>分类</a>
+            <a href="#" th:href="@{/tags/-1}" class="m-item item mobile-hide" th:classappend="${n==3} ? 'active'"><i class="tags icon"></i>标签</a>
+            <a href="#" th:href="@{/archives}" class="m-item item mobile-hide" th:classappend="${n==4} ? 'active'"><i class="folder icon"></i>归档</a>
+            <a href="#" th:href="@{/about}" class="m-item item mobile-hide" th:classappend="${n==5} ? 'active'"><i class="smile icon"></i>关于我</a>
+            <div class="m-item right item mobile-hide">
+                <form name="search" action="#" th:action="@{/search}" method="get" target="_blank" >
+                    <div class="ui icon inverted transparent input ">
+                        <input type="text" name="query" placeholder="请输入你想搜索的....." th:value="${query}">
+                        <i onclick="document.forms['search'].submit()" class="search link icon"></i>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="ui menu toggle black icon button top-right-button mobile-show margin-tb-mid">
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+
+
+<!--底部footer-->
+<footer th:fragment="footer" class="ui inverted vertical segment padded-tb-massive">
+    <div class="ui center aligned container">
+        <div class="ui inverted divided stackable grid">
+            <div class="three wide column">
+                <div class="ui inverted link list">
+                    <div class="item">
+                        <img src="../static/image/wecheat.png" th:src="@{/image/wecheat.png}" alt="微信二维码" class="ui rounded image" style="width: 150px">
+                    </div>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header text-thin text-lined text-spaced opacity-mini">最新博客</h4>
+                <div id="newblog-container">
+                    <div class="ui inverted link list" th:fragment="newblogList" >
+                        <a th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" th:each="blog : ${newblogs}" th:text="${blog.title}" href="#" class="item">博客1</a>
+                        <!--/*-->
+                        <a href="#" class="item">博客2</a>
+                        <a href="#" class="item">博客3</a>
+                        <!--*/-->
+                    </div>
+                </div>
+
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header text-thin text-lined text-spaced opacity-mini">联系我</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item">Email：310258782yzt@gmail.com</a>
+                    <a href="#" class="item">QQ：310258782</a>
+                </div>
+            </div>
+            <div class="seven wide column">
+                <h4 class="ui inverted header text-thin text-lined text-spaced opacity-mini">我的博客</h4>
+                <p class="text-thin text-lined text-spaced opacity-mini">这里是我的博客，用于分享我学习中的任何资料以及笔记经验</p>
+            </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <p class="text-thin text-lined text-spaced opacity-mini">Power by Springboot © 2020-2020 by YB </p>
+    </div>
+</footer>
+
+
+<!--Js-->
+<th:block th:fragment="script">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>  <!--引入jq-->
+    <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.js"></script> <!--引入semanticUI-->
+    <script src="../static/lib/prism/prism.js" th:src="@{/lib/prism/prism.js}"></script><!--代码高亮插件-->
+    <script src="../static/lib/tocbot/tocbot.min.js" th:src="@{/lib/tocbot/tocbot.min.js}"></script><!--文章大纲插件-->
+    <script src="../static/lib/qrcodeJs/qrcode.min.js" th:src="@{/lib/qrcodeJs/qrcode.min.js}"></script><!--二维码自动生成-->
+    <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script><!--平滑滚动-->
+    <script src="../static/lib/waypoints/jquery.waypoints.min.js" th:src="@{/lib/waypoints/jquery.waypoints.min.js}"></script><!--滚动侦测-->
+    <script>
+        $('#newblog-container').load(/*[[@{/footer/newblog}]]*/"/footer/newblog");
+    </script>
+</th:block>
+
+</body>
+</html>

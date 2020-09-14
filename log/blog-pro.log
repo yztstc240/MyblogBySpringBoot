@@ -1,0 +1,13 @@
+2020-09-04 14:45:41.197  INFO 15480 --- [restartedMain] com.github.blog.BlogApplication          : Starting BlogApplication on WIN-55896PFH953 with PID 15480 (D:\javatest\blog\target\classes started by Lenovo in D:\javatest\blog)
+2020-09-04 14:45:41.199  INFO 15480 --- [restartedMain] com.github.blog.BlogApplication          : The following profiles are active: pro
+2020-09-04 14:45:41.995  WARN 15480 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.github.blog]' package. Please check your configuration.
+2020-09-04 14:45:42.656  WARN 15480 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-09-04 14:45:42.839  WARN 15480 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-09-04 14:45:43.137  WARN 15480 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-09-04 14:45:43.339  INFO 15480 --- [restartedMain] com.github.blog.BlogApplication          : Started BlogApplication in 2.673 seconds (JVM running for 3.928)
+2020-09-04 14:54:03.909  INFO 16608 --- [restartedMain] com.github.blog.BlogApplication          : Starting BlogApplication on WIN-55896PFH953 with PID 16608 (D:\javatest\blog\target\classes started by Lenovo in D:\javatest\blog)
+2020-09-04 14:54:03.912  INFO 16608 --- [restartedMain] com.github.blog.BlogApplication          : The following profiles are active: pro
+2020-09-04 14:54:04.692  WARN 16608 --- [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.github.blog]' package. Please check your configuration.
+2020-09-04 14:54:05.344  WARN 16608 --- [restartedMain] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-09-04 14:54:05.534  WARN 16608 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-09-04 14:54:05.956  INFO 16608 --- [restartedMain] com.github.blog.BlogApplication          : Started BlogApplication in 2.616 seconds (JVM running for 3.988)
